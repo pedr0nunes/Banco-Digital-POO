@@ -24,7 +24,7 @@ public class Bank {
     public void printCLients() {
         HashSet<String> setOfClients = new HashSet<>();
         for(int i = 0; i < accounts.size(); i++)
-            setOfClients.add(this.accounts.get(i).getClient().getName());
+            setOfClients.add(this.getAccounts().get(i).getClient().getName());
 
         System.out.print(String.format("Client(s) of %s Bank is/are: %s", this.getName(), setOfClients));
     }

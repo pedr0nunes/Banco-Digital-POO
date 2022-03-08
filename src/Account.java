@@ -13,6 +13,22 @@ public abstract class Account implements IAccount {
         this.client = client;
     }
 
+    public int getAgency() {
+        return agency;
+    }
+
+    public int getNumberAccount() {
+        return numberAccount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
     private void verifyIfValueIsNegative(double value) {
         if (value < 0)
             throw new RuntimeException("Invalid value: is negative");
@@ -52,21 +68,6 @@ public abstract class Account implements IAccount {
        destinationAccount.deposit(value);
     }
 
-    public int getAgency() {
-        return agency;
-    }
-
-    public int getNumberAccount() {
-        return numberAccount;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public Client getClient() {
-        return client;
-    }
 
     protected void printAccountInfos() {
         System.out.println(String.format("Owner: %s", this.client.getName()));
